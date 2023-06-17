@@ -1,0 +1,81 @@
+<html>
+<style>
+body {
+  background-image: url('4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+</style>
+<script>
+function valid()
+{
+var count=0;
+if(N.value=="")
+{
+document.getElementById("k1").innerHTML="FILL NAME FIRST";
+return false; 
+}
+else
+document.getElementById("k1").innerHTML="";
+str=E.value;
+c1=str.indexOf("@");
+c2=str.indexOf(".com");
+if(c1==-1||c2==-1)
+{document.getElementById("k2").innerHTML="INVALID EMAIL ID";
+return false;
+}
+else
+document.getElementById("k2").innerHTML="";
+num=parseInt(M.value);
+for(i=num;i>0;i=Math.floor(i/10))
+count++;
+if(count!=10)
+{
+document.getElementById("k3").innerHTML="INVALID MOBILE NO";
+return false;
+}
+else
+
+document.getElementById("k3").innerHTML="";
+}
+</script>
+
+<font color="white">
+<center>
+<form name="kbf" method="Post" onsubmit="return valid()" action="save.php">
+<hr><table  height="300" width="200">
+
+<h1>=========Registration Form=========</h1>
+
+<TR>
+<TD><font color="white">NAME</font><font color="red">*</font></td>
+<td><input type="text" placeholder="Name"  name="N" id="N"><font color="red" id="k1"></font></TD>
+</tr>
+<tr>
+<td><font color="white">EMAIL ID</font><font color="red">*</font></td>
+<td><input type="text" placeholder="EMAIL"  name="E" id="E"/><font color="red" id="k2"></font></td>
+</tr>
+<tr>
+<td><font color="white">MOBILE NO</font><font color="red">*</font></td>
+<td><input type="text" placeholder="MOBILE" name="M" id="M"/><font color="red" id="k3"></font></td>
+</tr>
+<tr>
+<td><font color="white">Password</font></td>
+<td><input type="Password" placeholder="password" name="pwd" id="pwd"></td>
+</tr>
+<tr>
+<td><font color="white">Address</td>
+<td><textarea name="add" placeholder="Address" id="add"/></textarea></td>
+</tr>
+<tr>
+<td><font color="white">Upload Resume<input type="file" id="file" name="file">
+<br><br>
+<input type="submit" value="SAVE">
+<input type="reset" value="RESET"><br>
+Already a member?
+<a href="login.html" target="f2">Sign In</a><br>
+<font color="blue">
+
+<table>
+</form>

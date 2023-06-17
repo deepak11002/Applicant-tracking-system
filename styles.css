@@ -1,0 +1,44 @@
+.container {
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #666;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#signup,
+#signin,
+#upload {
+  display: none;
+}
+
+#signup a,
+#signin a {
+  color: #666;
+  text-decoration: none;
+}
+
+#signup a:hover,
+#signin a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  display: block;
+}
